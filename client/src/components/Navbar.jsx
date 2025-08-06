@@ -60,16 +60,15 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-600 hover:text-gray-900">
+            <a href="/" className="text-gray-600 hover:text-gray-900">
               Home
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">
+            <a href="/features" className="text-gray-600 hover:text-gray-900">
               Features
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">
-              Pricing
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">
+           <a href="/plan" className="text-gray-600 hover:text-gray-900">Pricing</a> 
+
+            <a href="/contact" className="text-gray-600 hover:text-gray-900">
               Contact
             </a>
           </nav>
