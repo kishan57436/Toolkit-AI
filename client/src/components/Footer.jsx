@@ -56,10 +56,10 @@ const Footer = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold">QuickAI</span>
+              <span className="text-xl font-bold">Toolkit AI</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md text-sm">
-              Experience the power of AI with QuickAI. Transform your content
+              Experience the power of AI with ToolKit AI. Transform your content
               creation with our suite of premium AI tools. Write articles,
               generate images, and enhance your workflow.
             </p>
@@ -148,7 +148,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p>© 2025 GreatStack. All rights reserved.</p>
+          <p>© 2025 Toolkit AI. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">
               Privacy Policy
