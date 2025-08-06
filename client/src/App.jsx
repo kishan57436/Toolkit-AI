@@ -94,7 +94,9 @@ import RemoveObject from './pages/RemoveObject'
 import ReviewResume from './pages/ReviewResume'
 import Community from './pages/Community'
 import { Toaster } from 'react-hot-toast'
-import Planss from './components/planss'
+// import Planss from './components/Plans'
+import Plans from './components/Plans'; 
+
 import Contact from './pages/Contact';
 import Features from './pages/Features'
 
@@ -105,7 +107,7 @@ const App = () => {
       <Routes>
 
         <Route path='/' element={<Home />} />
-        <Route path='/plan' element={<Planss />} />
+        <Route path='/plan' element={<Plans />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/features" element={<Features />} />
 

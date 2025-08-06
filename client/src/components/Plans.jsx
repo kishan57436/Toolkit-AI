@@ -55,7 +55,7 @@
 import React from 'react';
 import Navbar from './Navbar'; // ✅ Make sure this path is correct based on your folder structure
 
-const Planss = () => {
+const Plans = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar /> {/* ✅ Navbar added at the top */}
@@ -111,4 +111,4 @@ const Planss = () => {
   );
 };
 
-export default Planss;
+export default Plans;
