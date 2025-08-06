@@ -104,16 +104,16 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <nav className="flex flex-col space-y-4">
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a href="/" className="text-gray-600 hover:text-gray-900">
                 Home
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a href="/features" className="text-gray-600 hover:text-gray-900">
                 Features
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a href="/plan" className="text-gray-600 hover:text-gray-900">
                 Pricing
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-900">
+              <a href="/contact" className="text-gray-600 hover:text-gray-900">
                 Contact
               </a>
               <div className="pt-4">

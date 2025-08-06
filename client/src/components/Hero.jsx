@@ -27,25 +27,104 @@
 // }
 
 // export default Hero
-import React from "react";
+// import React from "react";
+// import { useNavigate } from "react-router-dom";
+// import { assets } from "../assets/assets";
+// import { ArrowRight, Sparkles, Users, Zap } from "lucide-react";
+
+// const Hero = () => {
+//   const navigate = useNavigate();
+
+//   return (
+//     <section className="pt-24 pb-16 bg-gradient-to-br from-slate-50 via-white to-blue-50">
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <div className="text-center">
+//           {/* Badge */}
+//           <span className="inline-flex items-center justify-center mb-6 px-3 py-1 text-sm font-medium rounded-full bg-blue-100 text-blue-700 hover:bg-blue-200 transition">
+//             <Sparkles className="w-3 h-3 mr-1" />
+//             Powered by AI
+//           </span>
+
+//           {/* Main Headline */}
+//           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+//             <span className="block">Create Amazing Content</span>
+//             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+//               with AI Tools
+//             </span>
+//           </h1>
+
+//           {/* Subheadline */}
+//           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+//             Transform your content creation with our suite of premium AI tools.
+//             Write articles, generate images, and enhance your workflow.
+//           </p>
+
+//           {/* CTA Buttons */}
+//           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+//             <button
+//               onClick={() => navigate("/ai")}
+//               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg rounded-lg transition"
+//             >
+//               Start Creating Now
+//               <ArrowRight className="w-5 h-5 ml-2 inline" />
+//             </button>
+//             <button className="bg-white px-8 py-3 text-lg border border-gray-300 rounded-lg hover:bg-gray-50 transition">
+//               Watch Demo
+//             </button>
+//           </div>
+
+//           {/* Stats Section */}
+//           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
+//             <div className="text-center">
+//               <div className="flex items-center justify-center mb-2">
+//                 <Zap className="w-5 h-5 text-blue-600 mr-2" />
+//                 <span className="text-2xl font-bold text-gray-900">50+</span>
+//               </div>
+//               <p className="text-gray-600">AI Tools</p>
+//             </div>
+//             <div className="text-center">
+//               <div className="flex items-center justify-center mb-2">
+//                 <Users className="w-5 h-5 text-purple-600 mr-2" />
+//                 <span className="text-2xl font-bold text-gray-900">10k+</span>
+//               </div>
+//               <p className="text-gray-600">Active Users</p>
+//             </div>
+//             <div className="text-center">
+//               <div className="flex items-center justify-center mb-2">
+//                 <img src={assets.user_group} alt="user group" className="h-5 mr-2" />
+//                 <span className="text-2xl font-bold text-gray-900">Trusted</span>
+//               </div>
+//               <p className="text-gray-600">by Creators</p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Hero;
+
+
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets";
 import { ArrowRight, Sparkles, Users, Zap } from "lucide-react";
+import WatchDemoModal from "../components/WatchDemoModal"; // ✅ Import the modal
 
 const Hero = () => {
   const navigate = useNavigate();
+  const [showVideo, setShowVideo] = useState(false); // ✅ Modal state
 
   return (
     <section className="pt-24 pb-16 bg-gradient-to-br from-slate-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          {/* Badge */}
           <span className="inline-flex items-center justify-center mb-6 px-3 py-1 text-sm font-medium rounded-full bg-blue-100 text-blue-700 hover:bg-blue-200 transition">
             <Sparkles className="w-3 h-3 mr-1" />
             Powered by AI
           </span>
 
-          {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             <span className="block">Create Amazing Content</span>
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
@@ -53,7 +132,6 @@ const Hero = () => {
             </span>
           </h1>
 
-          {/* Subheadline */}
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Transform your content creation with our suite of premium AI tools.
             Write articles, generate images, and enhance your workflow.
@@ -61,17 +139,22 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <button
-              onClick={() => navigate("/ai")}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg rounded-lg transition"
-            >
-              Start Creating Now
-              <ArrowRight className="w-5 h-5 ml-2 inline" />
-            </button>
-            <button className="bg-white px-8 py-3 text-lg border border-gray-300 rounded-lg hover:bg-gray-50 transition">
-              Watch Demo
-            </button>
-          </div>
+  <button
+    onClick={() => navigate("/ai")}
+    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg rounded-lg transition"
+  >
+    Start Creating Now
+    <ArrowRight className="w-5 h-5 ml-2 inline" />
+  </button>
+
+  <button
+    onClick={() => setShowVideo(true)}
+    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg rounded-lg transition"
+  >
+    Watch Demo
+  </button>
+</div>
+
 
           {/* Stats Section */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
@@ -91,7 +174,11 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
-                <img src={assets.user_group} alt="user group" className="h-5 mr-2" />
+                <img
+                  src={assets.user_group}
+                  alt="user group"
+                  className="h-5 mr-2"
+                />
                 <span className="text-2xl font-bold text-gray-900">Trusted</span>
               </div>
               <p className="text-gray-600">by Creators</p>
@@ -99,6 +186,9 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* ✅ Modal Component */}
+      <WatchDemoModal isOpen={showVideo} onClose={() => setShowVideo(false)} />
     </section>
   );
 };
