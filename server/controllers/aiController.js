@@ -111,8 +111,10 @@ export const generateImage = async (req, res)=>{
         const formData = new FormData()
         formData.append('prompt', prompt)
         const {data} = await axios.post("https://clipdrop-api.co/text-to-image/v1", formData, {
-            headers: {'x-api-key': process.env.CLIPDROP_API_KEY.trim()},
-            responseType: "arraybuffer",
+             headers: {
+      'x-api-key': process.env.CLIPDROP_API_KEY.trim(),
+      ...formData.getHeaders(), // Required for Node multipart
+    },
         })
 
         const base64Image = `data:image/png;base64,${Buffer.from(data, 'binary').toString('base64')}`;
