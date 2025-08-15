@@ -10,7 +10,7 @@ const AI = new OpenAI({
     apiKey: process.env.GEMINI_API_KEY,
     baseURL: "https://generativelanguage.googleapis.com/v1beta/openai/"
 });
-
+//kishan
 
 export const generateArticle = async (req, res)=>{
     try {
@@ -111,7 +111,7 @@ export const generateImage = async (req, res)=>{
         const formData = new FormData()
         formData.append('prompt', prompt)
         const {data} = await axios.post("https://clipdrop-api.co/text-to-image/v1", formData, {
-            headers: {'x-api-key': process.env.CLIPDROP_API_KEY,},
+            headers: {'x-api-key': process.env.CLIPDROP_API_KEY.trim()},
             responseType: "arraybuffer",
         })
 
