@@ -51,6 +51,8 @@ export const toggleLikeCreation = async (req, res)=>{
             message = 'Creation Unliked'
         }else{
             updatedLikes = [...currentLikes, userIdStr]
+
+            
             message = 'Creation Liked'
         }
 

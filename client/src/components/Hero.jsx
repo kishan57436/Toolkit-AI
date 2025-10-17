@@ -127,9 +127,9 @@ const Hero = () => {
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             <span className="block">Create Amazing Content</span>
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-              with AI Tools
-            </span>
+         <span className="text-blue-600 dark:text-blue-500">
+  with AI Tools
+</span>
           </h1>
 
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -138,10 +138,11 @@ const Hero = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        {/* CTA Buttons */}
+<div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
   <button
     onClick={() => navigate("/ai")}
-    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg rounded-lg transition"
+    className="bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-400 text-white dark:text-gray-100 px-8 py-3 text-lg rounded-lg transition-colors duration-300 flex items-center justify-center"
   >
     Start Creating Now
     <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -149,11 +150,13 @@ const Hero = () => {
 
   <button
     onClick={() => setShowVideo(true)}
-    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg rounded-lg transition"
+    className="bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-400 text-white dark:text-gray-100 px-8 py-3 text-lg rounded-lg transition-colors duration-300"
   >
     Watch Demo
   </button>
 </div>
+
+
 
 
           {/* Stats Section */}

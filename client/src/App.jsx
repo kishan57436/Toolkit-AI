@@ -99,6 +99,8 @@ import Plans from './components/Plans';
 
 import Contact from './pages/Contact';
 import Features from './pages/Features'
+// to show the toast to the user we used toaster and sonner  from sooner libary tool its help
+// to used the tool basically without any without any problem we can solved so easily
 
 const App = () => {
   return (

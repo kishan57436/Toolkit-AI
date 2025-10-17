@@ -38,6 +38,9 @@ const AiTools = () => {
   const navigate = useNavigate();
   const { user } = useUser();
 
+  // i will be more powerful the edgecase we will enjoy the answer
+  
+
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,9 +48,10 @@ const AiTools = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             Powerful AI Tools at Your{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Fingertips
-            </span>
+           <span className="text-blue-600 dark:text-blue-500">
+  Fingertips
+</span>
+
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Everything you need to create, enhance, and optimize your content with cutting-edge AI technology.
